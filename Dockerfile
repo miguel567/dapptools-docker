@@ -1,9 +1,10 @@
 FROM ubuntu
 
-LABEL key="Ubuntu image for runnig dapptools" 
+LABEL description="Ubuntu image for runnig dapptools" 
 
 RUN apt-get update && \
-    apt-get -y install automake autoconf python3 zsh curl git vim nano tmux npm iputils-ping
+    apt-get -y install python3 zsh curl git vim nano tmux npm iputils-ping htop stow && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN git config --global user.name "Miguel Cabeza"
 RUN git config --global user.email miguel567@gmail.com

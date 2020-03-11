@@ -3,7 +3,7 @@ FROM ubuntu
 LABEL description="Ubuntu image for runnig dapptools" 
 
 RUN apt-get update && \
-    apt-get -y install python3 zsh curl git vim nano tmux npm iputils-ping htop stow && \
+    apt-get -y install python3 python3-pip zsh curl git vim nano tmux npm iputils-ping htop stow && \
     rm -rf /var/lib/apt/lists/*
 
 RUN git config --global user.name "Miguel Cabeza"

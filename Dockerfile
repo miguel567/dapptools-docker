@@ -67,9 +67,9 @@ RUN pip3 install --user tmuxp
 RUN su - migue sh -c "$(curl -fsSL https://dapp.tools/install)"
 
 RUN mkdir /root/dev
-VOLUME /root/devub
+WORKDIR /root/dev
 
-WORKDIR /root
+VOLUME /root/dev
 
 ENV TERM=xterm-256color
 ENV LANG=en_US.UTF-8

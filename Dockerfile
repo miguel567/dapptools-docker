@@ -65,6 +65,7 @@ RUN pip3 install --user tmuxp
 
 #install dapp Tools.
 RUN su - migue sh -c "$(curl -fsSL https://dapp.tools/install)"
+RUN sh -c ". /home/migue//.nix-profile/etc/profile.d/nix.sh"
 
 RUN mkdir /root/dev
 WORKDIR /root/dev

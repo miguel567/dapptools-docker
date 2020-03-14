@@ -107,10 +107,12 @@ docker () {
 export -f docker
 
 if [ $# -eq 0 ]; then
-  echo "Start interactive shell"
-  exec "$BASH" --login -i
+  echo "Start interactive shell for ubuntu-dapptools:1.2"
+  docker run -tiv //d/dockerfiles:/root/dev ubuntu-dapptools:1.2
+
+  
+
 else
   echo "Start shell with command"
   exec "$BASH" -c "$*"
 fi
-exec "$BASH docker run -tiv //d/dockerfiles:/root/dev ubuntu-dapptools:1.2"

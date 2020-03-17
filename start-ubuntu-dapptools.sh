@@ -107,8 +107,9 @@ docker () {
 export -f docker
 
 if [ $# -eq 0 ]; then
-  echo "Start interactive shell for ubuntu-dapptools:1.2"
-  docker run -tiv //d/dockerfiles:/root/dev ubuntu-dapptools:1.2
+  echo "Start interactive shell for ubuntu-dapptools:1.3"
+  docker start -a thirsty-hugle
+  #docker run -tiv //d/dockerfiles:/root/dev ubuntu-dapptools:1.3
 
   
 
